@@ -1,0 +1,7 @@
+<h1 class="pokemon__grid__title">PokeDex</h1>
+<div class="pokemon__grid__search">
+  <input type="text" class="search" placeholder="Pesquise um pokemon!" [(ngModel)]="search" />
+</div>
+<div class="pokemon__grid">
+  <app-pokemon-card *ngFor="let pokemon of pokemonArray | filter: search" [name]="pokemon.name" [url]="pokemon.url" [image]="pokemon.image"></app-pokemon-card>
+</div>
